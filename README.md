@@ -1,5 +1,5 @@
 ![PC-Recipes](https://dl.dropbox.com/s/9phidxvj54xfodi/PC-Recipes-B-small.jpg)
-==========
+
 Welcome to PC-Recipes!
 
 PC-Recipes is a website which enables finding recipes according to the products you have at home.
