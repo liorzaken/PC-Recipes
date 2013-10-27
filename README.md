@@ -1,4 +1,4 @@
-PC-Recipes
+![PC-Recipes](https://dl.dropbox.com/s/9phidxvj54xfodi/PC-Recipes-B-small.jpg)
 ==========
 Welcome to the PC-Recipes wiki!
 
