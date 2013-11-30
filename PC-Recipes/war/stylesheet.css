@@ -28,6 +28,10 @@ h2 {
 	width: 15%;
 	margin-top: 10px;
 }
+#result p{
+	font-family: Arial, Garamond, Times, Serif;
+	font-size: 20px;
+}
 #mainFrame {
 	position: relative;
 	float: center;
