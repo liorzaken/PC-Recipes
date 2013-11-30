@@ -1,2 +1,0 @@
-serviceClass: pcrecipes.client.GreetingService
-path: 14F2E2F51F0594292B484DFD09A18C08.gwt.rpc
