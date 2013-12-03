@@ -7,7 +7,7 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Content-Language" content="he" />
-		<title>PC-Recipes-About</title>
+		<title>PC-Recipes - About</title>
 	</head>
 	<body>
 	<script type="text/javascript" language="javascript" src="jQuery.js"></script>		

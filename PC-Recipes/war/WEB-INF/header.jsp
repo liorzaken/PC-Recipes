@@ -1,9 +1,6 @@
 <!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
 
 <div id="header">
-	<div id="headerLeft">
-		<a href="Main"><img style="border-radius: 15px 15px 15px 0px;  border: 2px solid #000000;" src="https://raw.github.com/liorzaken/PC-Recipes/master/Images/PC-Recipes-B-small.jpg"></a>
-	</div>
 	<div id="headerRight">
 		<div id="menu">
 			<ul>
@@ -14,7 +11,17 @@
 				<li><a href="Help.jsp">עזרה</a></li>
 				<li><a href="About.jsp">אודות</a></li>
 			</ul>	
-		</div>	
+		</div>
+	</div>
+	<div id="headerLeft">
+		<a href="Main"><img src="https://raw.github.com/liorzaken/PC-Recipes/master/Images/PC-Recipes-B-small.jpg"></a>
 	</div>
 </div>
-<div id="header2"></div>
+<div id="header2">
+	<div id="search">
+		<form>
+			<input type="text" name="SearchItem" value="כתוב כאן">
+		</form>
+		<button>חיפוש</button>
+	</div>
+</div>
