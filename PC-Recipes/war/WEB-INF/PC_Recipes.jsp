@@ -16,16 +16,17 @@
 	<body>
 		<script type="text/javascript" language="javascript" src="jQuery.js"></script>
 		<%@ include file="/WEB-INF/header.jsp" %>
-		
-		<div id="mainFrameQuestion">
-			<div id="addProduct">
+		<div id="addProduct">
+				<h2 align=center>הוסף מרכיב</h2>
 				<form>
-					הוסף מרכיב: <input type="text" name="addItem" value="כתוב כאן">
+					<input type="text" name="addItem" value="כתוב כאן">
 				</form>
 				<button>הוסף</button>
 			</div>
-			<div id="questions">
-				<h2 id="question"> כאן תהיה שאלה </h2>
+		<div id="mainFrameQuestion">
+			
+			<!-- <div id="questions">-->
+				<h2 id="question" align=center> כאן תהיה שאלה </h2>
 				<ul id="answer">
 					<li class="ans_choice">תשובה 1</li>
 					<li class="ans_choice">תשובה 2</li>
@@ -33,10 +34,10 @@
 					<li class="ans_choice">תשובה 4</li>
 					<li class="ans_choice">תשובה 5</li>
 				</ul>
-			</div>
+			<!--</div>-->
 		</div>
 		<div id="mainFrameResults">
-		<h2>תוצאות</h2>
+		<h2 align=center>תוצאות חיפוש</h2>
 		</div>
 		<div id="footer2"></div>
 		<div id="footer"></div>

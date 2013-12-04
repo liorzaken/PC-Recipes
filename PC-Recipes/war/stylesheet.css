@@ -251,8 +251,10 @@ iframe {
 	/*margin-left: 50%;
 	margin-right: 35%;
 	height: 370px;*/
-	width: 70%;
+	width: 38%;
 	/*background-color: #00f101;*/
+	border-right: 1px solid #9e191e;
+	border-left: 1px solid #9e191e;
 	
 }
 
@@ -264,22 +266,22 @@ iframe {
 	/*margin-left: 50%;
 	margin-right: 35%;
 	height: 370px;*/
-	height: 100%;
-	width: 30%;
+	/*height: 100%;*/
+	width: 38%;
 	/*background-color: #6001a1;*/
 }
 
 #questions {
 	float: left;
-	width: 65%;
-	/*background-color: #6001a1;
-	border: 1px solid black;*/
+	width: 50%;
+	/*background-color: #6001a1;*/
 }
 
 #addProduct {
-	padding-top: 15px;
+	padding-top: 2px;
 	float: right;
-	width: 33%;
+	width: 20%;
+
 	/*background-color: #00f101;*/
 }
 
