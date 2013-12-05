@@ -34,7 +34,15 @@
    <servlet-name>SearchServlet</servlet-name>
     <url-pattern>/Search</url-pattern>
   </servlet-mapping>
-  
+
+    <servlet>
+    <servlet-name>recipePage</servlet-name>
+    <jsp-file>/WEB-INF/recipePage.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>recipePage</servlet-name>
+    <url-pattern>/recipePage</url-pattern>
+  </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
