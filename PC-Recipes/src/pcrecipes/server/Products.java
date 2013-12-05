@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Products {
 
-	private String nameProd;
+	private String naimProd;
 	private int idProd=0;
 	private String swapProd;
 	//public int i=0;
@@ -12,14 +12,14 @@ public class Products {
 	
 	/////////constructor without swap option
 	public Products(String name){
-		nameProd=name;
+		naimProd=name;
 		idProd++;
 		swapProd="not found";
 
 	}
 	/////////constructor with swap option
 	public Products(String name, String swap){
-		nameProd=name;
+		naimProd=name;
 		idProd++;
 		swapProd=swap;
 	}
@@ -27,10 +27,10 @@ public class Products {
 
 	public String getNaimProd()
 	{
-		return nameProd;
+		return naimProd;
 	}
 	public void setNaameProd(String nameProd){
-		this.nameProd=nameProd;
+		this.naimProd=nameProd;
 	}
 
 	public int getIdProd()
@@ -51,7 +51,7 @@ public class Products {
 
 	public String toString()
 	{
-		return (nameProd +"שם המוצר"+"\n" + idProd +"מספר סידורי"+"\n"+ swapProd+"תחליף" +"\n");
+		return (naimProd +"שם המוצר"+"\n" + idProd +"מספר סידורי"+"\n"+ swapProd+"תחליף" +"\n");
 	}
 }
 
