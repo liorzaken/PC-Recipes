@@ -62,6 +62,10 @@ body {
 	float: right;
 	/*width: 70%;*/
 }
+#headerCenter {
+	float: center;
+	
+}
 #headerLeft {
 	float: Left;
 	/*width: 30%;
@@ -88,6 +92,30 @@ body {
 	font-size: 25px;
 	margin: 10px 10px 10px 5px;
 	padding: 10px 10px 15px 10px;
+}
+
+#menu1 {
+	padding-top: 8px;
+}
+#menu1 ul li{
+	
+	top: 15px;
+	font-size: 30px;
+	margin: 10px 10px 10px 5px;
+	padding: 10px 10px 15px 10px;
+	
+}
+#menu1 li {
+	display: inline;
+	font-family: Futura, Tahoma, sans-serif;
+	padding: 5px;
+	border-radius: 5px 5px;
+	background-color: #9e191e;
+}
+#menu1 a {
+    color:#ffffff;
+    text-decoration:none;
+    
 }
 /*#navbar {
 	position: fixed;
@@ -171,6 +199,17 @@ p {
 	width: 30%;
 }
 
+#pRecipe {
+	float:left;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+	/*height: 370px;*/
+	width:70%;
+	
+	
+}
 #addProduct {
 	float:right;
 	display: inline;
@@ -284,6 +323,7 @@ iframe {
 
 	/*background-color: #00f101;*/
 }
+
 
 .ans_choice {
 	border-radius: 5px;
