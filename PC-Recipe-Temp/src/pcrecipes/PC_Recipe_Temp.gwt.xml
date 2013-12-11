@@ -20,7 +20,7 @@
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='pcrecipe.client.PC_Recipe_Temp'/>
+  <entry-point class='pcrecipes.client.PC_Recipe_Temp'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
