@@ -1,2 +1,0 @@
-# Module pc_recipes
-# RPC service class, partial path of RPC policy file
