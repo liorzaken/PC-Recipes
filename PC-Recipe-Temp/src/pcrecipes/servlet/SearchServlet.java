@@ -40,22 +40,12 @@ public class SearchServlet extends HttpServlet {
 			}
 			else
 			{	
-				writer.write("<p>Id: " + resultRecipe.get_id() + "</p>");
-				writer.write("<p>שם המתכון: " + resultRecipe.get_name()  + "</p>");
-				writer.write("<p>קטגוריה: " + resultRecipe.get_category()  + "</p>");
-				if(resultRecipe.get_product()!=null){
-					writer.write("<p>מצרכים: " + resultRecipe.get_product().getNameProd()  + "</p>");
-					writer.write("<p>מצרכים חלופיים: " + resultRecipe.get_product().getSwapProd()  + "</p>");
-				}
-				else{
-					writer.write("<p>Products: </p>");
-					writer.write("<p>Swap product: </p>");
-				}
+				writer.write(resultRecipe.toString());
 				writer.write("<p><a href="+"Main"+">לעמוד הראשי - PC-Recipes</a></p>");
 			}
-			
+
 		}
-		
+
 	}
 
 	/**

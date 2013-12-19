@@ -4,60 +4,25 @@ import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable
 public class Products {
-	public int IDCount=0;
+	private static int IDCount=0;
 	@Persistent
-	public String nameProd;
+	private int _idProd;
 	@Persistent
-	public int idProd;
-	@Persistent
-	public String swapProd;
-	//public int i=0;
-	
-	
-	/////////constructor without swap option
-	public Products(String name){
-		nameProd=name;
-		idProd = IDCount;
-		IDCount++;
-		swapProd="not found";
-
-	}
-	/////////constructor with swap option
-	public Products(String name, String swap){
-		nameProd=name;
-		idProd = IDCount;
-		IDCount++;
-		swapProd=swap;
-	}
+	private String _nameProd;
 
 
-	public String getNameProd()
-	{
-		return nameProd;
-	}
-	public void setNameProd(String nameProd){
-		this.nameProd=nameProd;
+	public Products(String nameProd) {
+		_idProd = ++IDCount;
+		this._nameProd = nameProd;
 	}
 
-	public int getIdProd()
-	{
-		return idProd;
-	}
-	public void setIdProd(int idProd){
-		this.idProd=idProd;
-	}
+	public static int getIDCount() { return IDCount; }
+	public int get_idProd() { return _idProd; }
+	public String get_nameProd() { return _nameProd; }
 
-	public String getSwapProd()
-	{
-		return swapProd;
-	}
-	public void setSwapProd(String swapProd){
-		this.swapProd=swapProd;
-	}
-
-	public String toString()
-	{
-		return (nameProd +"שם המוצר"+"\n" + idProd +"מספר סידורי"+"\n"+ swapProd+"תחליף" +"\n");
+	@Override
+	public String toString() {
+		return "Products: \n idProd=" + _idProd + "\n nameProd=" + _nameProd
+				+ "\n";
 	}
 }
-

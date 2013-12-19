@@ -47,14 +47,22 @@
   
   <servlet>
     <servlet-name>RecipeManagerJSP</servlet-name>
-    <jsp-file>/WEB-INF/RecipeManager.jsp</jsp-file>
+    <jsp-file>/WEB-INF/AddRecipeForm.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
     <servlet-name>RecipeManagerJSP</servlet-name>
-    <url-pattern>/RecipeManager</url-pattern>
+    <url-pattern>/AddRecipeForm</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet-mapping>
+		<servlet-name>RecipePageServlet</servlet-name>
+		<url-pattern>/RecipePage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RecipePageServlet</servlet-name>
+		<jsp-file>/WEB-INF/recipe.jsp</jsp-file>
+	</servlet>
   
   <!-- Default page to serve -->
   <welcome-file-list>

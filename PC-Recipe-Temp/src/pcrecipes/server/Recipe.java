@@ -1,72 +1,64 @@
 package pcrecipes.server;
 
+import java.util.Arrays;
+
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable
 public class Recipe {
-	public int IDCount = 0;
+	private static int IDCount = 0;
 	@Persistent
-	public int _id;
+	private int _id;
 	@Persistent
-	public String _name;
+	private String _nameRecipe;
 	@Persistent
-	public Products _product;
+	private ProductExtend[] _products;	
 	@Persistent
-	public String _category;
+	private String _swapProd;
 	@Persistent
-	public String _instruction;
-	
-	public Recipe()
-	{
-		
-	}
-	public Recipe (String name){
-		_id = IDCount;
-		IDCount++;
-		_name = name;
-		_product = null;
-		_category = "";
-		_instruction = "";
-	}
-	public Recipe (String name, String category, Products product, String instruction){
-		_id = IDCount;
-		IDCount++;
-		_name = name;
-		Products p = new Products(product.getNameProd(), product.getSwapProd());
-		_product = p;
-		_category = category;
-		_instruction = instruction;
-	}
-	public int get_id() {
-		return _id;
-	}
-	public void set_id(int id) {
-		this._id = id;
-	}
-	public String get_name() {
-		return _name;
-	}
-	public void set_name(String name) {
-		this._name = name;
-	}
-	public Products get_product() {
-		return _product;
-	}
-	public void set_product(Products product) {
-		this._product = product;
-	}
-	public String get_category() {
-		return _category;
-	}
-	public void set_category(String category) {
+	private int[] _category;
+	@Persistent
+	private String _instruction;
+
+	public Recipe(String nameRecipe, 
+			ProductExtend[] products, String swapProd, int[] category,
+			String instruction) {
+
+		this._id = ++IDCount;
+		this._nameRecipe = nameRecipe;
+		this._products = products;
+		this._swapProd = swapProd;
 		this._category = category;
-	}
-	public String get_instruction() {
-		return _instruction;
-	}
-	public void set_instruction(String instruction) {
 		this._instruction = instruction;
 	}
+
+	public static int getIDCount() { return IDCount; }
+	public int get_id() { return _id; }
+	public String get_nameRecipe() { return _nameRecipe; }
+	public ProductExtend[] get_Products() { return _products; }
+	public String get_swapProd() { return _swapProd; }
+	public int[] get_category() { return _category; }
+	public String get_instruction() { return _instruction; }
+
+	public String prodString() {
+		String temp = "";
+		for (int i=0; i< _products.length; i++){
+			temp+= "שם המתכון: " + _products[i].get_prod().get_nameProd() +"\n";
+			temp+= _products[i].get_amountUnit() + " ";
+		}
+		
+		return temp;
+	}
+	@Override
+	public String toString() {
+		return "Recipe \n id=" + _id + "\n nameRecipe=" + _nameRecipe
+				 + "\n products="
+				+ prodString() + "\n swapProd=" + _swapProd
+				+ "\n category=" + Arrays.toString(_category)
+				+ "\n instruction=" + _instruction + "\n";
+	}
+	
+	
 	
 }

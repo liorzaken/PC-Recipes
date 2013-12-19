@@ -3,6 +3,7 @@ import java.util.List;
 
 import javax.jdo.PersistenceManager;
 
+import pcrecipes.server.Products;
 import pcrecipes.server.Recipe;
 
 import com.google.appengine.api.datastore.DatastoreService;
@@ -25,14 +26,24 @@ public final class DataBaseManager
     {
     	pm.makePersistent(r);
     }
-    @SuppressWarnings("unchecked")
-	public List<Recipe> getRecipe(String name)
+   
+/*	public Recipe getRecipe(String recipeName)
     {
-    	System.out.println("getting Recipe" + name);
+    	System.out.println("getting Recipe" + recipeName);
     	javax.jdo.Query q = pm.newQuery(Recipe.class);
-    	q.setFilter("name==theName");
+    	q.setFilter("recipeName==theName");
     	q.declareParameters("String theName");
-    	return (List<Recipe>)q.execute(name);
+    	return (Recipe) q.execute(recipeName);
+    }
+    */
+    @SuppressWarnings("unchecked")
+	public List<Recipe> getRecipe(String recipeName)
+    {
+    	System.out.println("getting Recipe" + recipeName);
+    	javax.jdo.Query q = pm.newQuery(Recipe.class);
+    	q.setFilter("recipeName==theName");
+    	q.declareParameters("String theName");
+    	return (List<Recipe>) q.execute(recipeName);
     }
     @SuppressWarnings("unchecked")
 	public List<Recipe> getAllRecipes()
@@ -40,5 +51,13 @@ public final class DataBaseManager
     	javax.jdo.Query q = pm.newQuery(Recipe.class);
     	return (List<Recipe>)q.execute();
     }
+
+	public Products getProd(String nameProd) {
+    	System.out.println("getting Prod" + nameProd);
+    	javax.jdo.Query q = pm.newQuery(Products.class);
+    	q.setFilter("nameProd==theName");
+    	q.declareParameters("String theName");
+    	return (Products)q.execute(nameProd);
+	}
 
 }
