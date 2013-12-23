@@ -1,3 +1,4 @@
+
 var searchItem = ["cheese","choclate","Bamba","chicken"];
 $(document).ready(function() {
     $('button').click(function() {
