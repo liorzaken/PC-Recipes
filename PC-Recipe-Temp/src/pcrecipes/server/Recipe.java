@@ -58,7 +58,13 @@ public class Recipe {
 				+ "\n category=" + Arrays.toString(_category)
 				+ "\n instruction=" + _instruction + "\n";
 	}
-	
+	public String CategoryStr(){
+		String str="";
+		for (int i=0; i<_category.length-1; i++)
+			str+=_category[i]+", ";
+		str+=_category[_category.length-1];
+		return str;
+	}
 	
 	
 }

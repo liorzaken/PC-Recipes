@@ -2,6 +2,7 @@ package dbManager;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
 
 import pcrecipes.server.Products;
 import pcrecipes.server.Recipe;
@@ -36,14 +37,14 @@ public final class DataBaseManager
     	return (Recipe) q.execute(recipeName);
     }
     */
-    @SuppressWarnings("unchecked")
-	public List<Recipe> getRecipe(String recipeName)
+   
+	public List<Recipe> getRecipeByName(String nameRecipe)
     {
-    	System.out.println("getting Recipe" + recipeName);
-    	javax.jdo.Query q = pm.newQuery(Recipe.class);
-    	q.setFilter("recipeName==theName");
-    	q.declareParameters("String theName");
-    	return (List<Recipe>) q.execute(recipeName);
+    	System.out.println("getting Recipe " + nameRecipe);
+    	Query q = pm.newQuery(Recipe.class);
+    	q.setFilter("_nameRecipe==theNameRecipe");
+    	q.declareParameters("String theNameRecipe");
+    	return (List<Recipe>) q.execute(nameRecipe);
     }
     @SuppressWarnings("unchecked")
 	public List<Recipe> getAllRecipes()

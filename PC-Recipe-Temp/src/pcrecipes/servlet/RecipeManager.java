@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import pcrecipes.server.Products;
 import pcrecipes.server.Recipe;
 import pcrecipes.server.ProductExtend;
 import dbManager.DataBaseManager;
@@ -22,7 +21,6 @@ public class RecipeManager extends HttpServlet {
 	 */
 	public RecipeManager() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -35,7 +33,6 @@ public class RecipeManager extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		Object nameR = request.getParameter("recipeName");
 		Object ansNumR = request.getParameter("ansNum");
 		Object productsR = request.getParameter("products");
@@ -67,7 +64,7 @@ public class RecipeManager extends HttpServlet {
 			
 			
 			HttpSession session = request.getSession();
-			session.setAttribute("recipeName", r.get_nameRecipe());
+			session.setAttribute("nameRecipe", nameR.toString());
 			
 			DataBaseManager.getInstance().insertNewRecipe(r);
 		}
