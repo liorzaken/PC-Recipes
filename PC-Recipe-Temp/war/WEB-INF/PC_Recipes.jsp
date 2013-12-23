@@ -18,7 +18,8 @@
 		<%@ include file="/WEB-INF/header.jsp" %>
 		<div id="addProduct">
 				<h2 align=center>הוסף מרכיב</h2>
-				<form>
+				<form  action = "FilterProd"  method ="post" >
+				
 					<input type="text" name="addItem" value="כתוב כאן">
 				</form>
 				<button>הוסף</button>
