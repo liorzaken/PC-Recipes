@@ -5,7 +5,6 @@
 <%@page import="java.util.List;"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 ﻿
 <!DOCTYPE html>
 <html>
@@ -17,20 +16,24 @@
 <title>PC-Recipes - RecipePage</title>
 </head>
 <body>
-<%
-List<Recipe> r;%>
-	
-	<% r  = DataBaseManager.getInstance().getRecipe(
-			session.getAttribute("recipeName").toString()); %>
+	<%
+		List<Recipe> list;
+		if (session.getAttribute("nameRecipe") == null) {
+			list = DataBaseManager.getInstance().getAllRecipes();
+		} else {
+			list = DataBaseManager.getInstance().getRecipeByName(
+					session.getAttribute("nameRecipe").toString());
+		}
+	%>
+	<%
+		for (Recipe item : list) {
+	%>
 	<div id="header">
 		<div id="headerRight">
 			<div id="menu1">
 				<ul>
-					<li><a>
-							<%
-								r.get(0).get_nameRecipe();
-							%>
-					</a></li>
+
+					<li><%=item.get_nameRecipe()%></li>
 				</ul>
 			</div>
 		</div>
@@ -49,43 +52,40 @@ List<Recipe> r;%>
 		</p>
 	</div>
 	<div id="mainFrame">
-
-
-		}
-		<%
-		ProductExtend[] p = r.get(0).get_Products();
-	%>
+		<p>קטגוריות:</p>
+		<p>	<%=item.CategoryStr()%></p>
 
 		<p>מצרכים:</p>
-
-		<ul>
+		<table>
 			<%
-				for (ProductExtend item : p) {
+				for (int i = 0; i < item.get_Products().length; i++) {
 			%>
-			<li>
-				<%
-					item.get_prod().get_nameProd();
-						item.get_amountUnit();
-				%>
-			</li>
+			<tr>
+				<td><%=i + 1%>.</td>
+				<td><%=item.get_Products()[i].get_prod().get_nameProd()%></td>
+				<td><%=item.get_Products()[i].get_amountUnit()%></td>
+			</tr>
 			<%
 				}
 			%>
-		</ul>
-	</div>
-	<div id="mainFrame">
+		</table>
+
+		<p>הערות למצרכים חלופיים:</p>
+		<p>
+			<%=item.get_swapProd()%>
+		</p>
+
 		<p>אופן ההכנה:</p>
-		<ol>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ol>
+		<p>
+			<%=item.get_instruction()%>
+		</p>
 	</div>
 
-
+	<%
+		break;
+		}
+	%>
+	<a href="Main">חזרה לעמוד הראשי</a>
 	<div id="footer2"></div>
 	<div id="footer"></div>
 </body>
