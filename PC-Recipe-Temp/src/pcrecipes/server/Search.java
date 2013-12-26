@@ -3,7 +3,7 @@ package pcrecipes.server;
 //import java_cup.production;
 
  
-public class search {
+public class Search {
 	
 	static int IinsertProd=0;
 	static int JinsertAnswer=0;
@@ -11,13 +11,14 @@ public class search {
 	final static int MAX_FILTER_ANS=30;
 
 	
-	int [] filterProd = new int[MAX_FILTER_PRODE];
+	String [] filterProd = new String[MAX_FILTER_PRODE];
 	int [] filterAns= new int[MAX_FILTER_ANS];
 	
 	
-	public void insertProd(int id){
-		filterProd[IinsertProd]=id;
+	public void insertProd(String name){
+		filterProd[IinsertProd]=name;
 		IinsertProd++;
+		System.out.println(ProdtoString());
 	
 	}
 	
@@ -26,4 +27,11 @@ public class search {
 		JinsertAnswer++;
 
      }
+	public String ProdtoString(){
+		String str = "";
+		for(String item: filterProd){
+			str+=item+", ";
+		}
+		return str;
+	}
 }

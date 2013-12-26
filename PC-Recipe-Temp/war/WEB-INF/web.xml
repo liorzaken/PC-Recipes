@@ -44,6 +44,15 @@
    <servlet-name>AddRecipeServlet</servlet-name>
     <url-pattern>/AddRecipe</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>FilterProdServlet</servlet-name>
+    <servlet-class>pcrecipes.servlet.FilterProdServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>FilterProdServlet</servlet-name>
+    <url-pattern>/FilterProd</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <servlet-name>RecipeManagerJSP</servlet-name>
@@ -55,31 +64,13 @@
   </servlet-mapping>
   
   <servlet-mapping>
-		<servlet-name>RecipePageServlet</servlet-name>
+		<servlet-name>RecipePageJSP</servlet-name>
 		<url-pattern>/RecipePage</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>RecipePageServlet</servlet-name>
+		<servlet-name>RecipePageJSP</servlet-name>
 		<jsp-file>/WEB-INF/recipe.jsp</jsp-file>
-	</servlet>
-  
-	<servlet-mapping>
-		<servlet-name>FilterProdServlet</servlet-name>
-		<url-pattern>/FilterProd</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>FilterProdServlet</servlet-name>
-		<jsp-file>/WEB-INF/PC_Recipes.jsp</jsp-file>
-	</servlet>
-
-		<servlet-mapping>
-		<servlet-name>FilterAnswerServlet</servlet-name>
-		<url-pattern>/FilterAnswer</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>FilterAnswerServlet</servlet-name>
-		<jsp-file>/WEB-INF/PC_Recipes.jsp</jsp-file>
 	</servlet>
 		
   <!-- Default page to serve -->

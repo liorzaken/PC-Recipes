@@ -1,3 +1,4 @@
+<%@page import="pcrecipes.server.Search"%>
 <%@ page import="pcrecipes.server.Recipe"%>
 <%@ page import="pcrecipes.server.Questions"%>
 <%@page import="java.util.List"%>
@@ -28,7 +29,7 @@
 		Questions questionsArray[] = q.inputQuest();
 		String[] arrayAnswer = q.inputAnswer();
 		arrayAnswer = q.inputAnswer();
-
+		Search searchArr = new Search();	
 	//	q.inputQuest(questionsArray);
 	%>
 		
@@ -37,10 +38,12 @@
 	<%@ include file="/WEB-INF/header.jsp"%>
 	<div id="addProduct">
 		<h2 align=center>הוסף מרכיב</h2>
-		<form>
+		<form action = "FilterProd" method="get">
 			<input type="text" name="addItem" value="כתוב כאן">
 		</form>
-		<button>הוסף</button>
+		<button id="addProd">הוסף</button>
+		<br/>
+		<div class="listProd"></div>
 	</div>
 	<div id="mainFrameQuestion">
 

@@ -53,12 +53,13 @@ public final class DataBaseManager
     	return (List<Recipe>)q.execute();
     }
 
-	public Products getProd(String nameProd) {
+	public List<Products> getProd(String nameProd) {
     	System.out.println("getting Prod" + nameProd);
-    	javax.jdo.Query q = pm.newQuery(Products.class);
-    	q.setFilter("nameProd==theName");
-    	q.declareParameters("String theName");
-    	return (Products)q.execute(nameProd);
+    	Query q = pm.newQuery(Products.class);
+    	q.setFilter("_nameProd==theNameProd");
+    	q.declareParameters("String theNameProd");
+    	return (List<Products>)q.execute(nameProd);
 	}
+	
 
 }

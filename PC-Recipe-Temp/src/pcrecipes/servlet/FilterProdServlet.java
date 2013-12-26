@@ -3,6 +3,7 @@ package pcrecipes.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
@@ -13,8 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import dbManager.DataBaseManager;
 import pcrecipes.server.Products;
 import pcrecipes.server.Recipe;
-import pcrecipes.server.Recipes;
-import pcrecipes.server.search;
+import pcrecipes.server.Search;
 
 /**
  * Servlet implementation class FilterProdServlet
@@ -22,41 +22,42 @@ import pcrecipes.server.search;
 //@WebServlet("/FilterProdServlet")////////למה זה עושה אדום ומה צריך להיות בתוך בסוגריים
 public class FilterProdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public FilterProdServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public FilterProdServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		Object Item = request.getParameter("addItem");
+
+		if(Item.toString() !=null)
+		{
+			Search p = new Search();
+			List<Products> list;
+			list = DataBaseManager.getInstance().getProd(Item.toString());
+			if(!list.isEmpty())
+				for(Products item:list){
+					p.insertProd(item.get_nameProd());
+					break;
+				}
+		}
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		Object Item = request.getParameter("addItem");
-		
-		
-		if(Item.toString() !=null)
-		{
-			Products prode = DataBaseManager.getInstance().getProd(Item.toString());
-			
-			//if(prode!=null) 
-				
-			search p = new search();
-			p.insertProd(prode.get_idProd());
-			
-		}
-		
+
+
+
 	}
 }
 
