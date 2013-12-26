@@ -29,7 +29,7 @@
 		Questions questionsArray[] = q.inputQuest();
 		String[] arrayAnswer = q.inputAnswer();
 		arrayAnswer = q.inputAnswer();
-		Search searchArr = new Search();	
+		//Search searchArr = new Search();	
 	//	q.inputQuest(questionsArray);
 	%>
 		
