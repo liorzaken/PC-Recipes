@@ -1,12 +1,26 @@
 
 var searchItem = ["cheese","choclate","Bamba","chicken"];
 $(document).ready(function() {
-    $('button').click(function() {
-    	$('#mainFramResult').html("<h2>תוצאות חיפוש</h2>");
-//   	$('#mainFrameResults').append("<p>" +recipes.searchByName(request.getParameter("SearchItem"))+ "</p><hr/>");
-//   	for(var i=0; i<searchItem.length; i++){
-//  		$('#mainFrameResults').append("<p>" +searchItem[i]+ "</p><hr/>");
-//  	}
-//    	$(this).remove();
-    });
+	$('#addProd').click(function() {
+		var newProd = $('input[name=addItem]').val();
+		$('.listProd').append('<div class="item">'+newProd+ '</div>');
+		$('input[name=addItem]').val("");
+
+
+		
+/*		
+		$.ajax({
+		    url: "/FilterProd",
+		    type: "GET",
+		    data: newProd,
+		    success: function(data){ 
+		    	
+		        //handle returned arrayList
+		    },
+		    error: function(e){  
+		        //handle error
+		    } 
+		});
+*/
+	});
 });

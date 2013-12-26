@@ -1,7 +1,11 @@
 package pcrecipes.server;
 
+import java.util.List;
+
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+
+import dbManager.DataBaseManager;
 @PersistenceCapable
 public class ProductExtend {
 	@Persistent
