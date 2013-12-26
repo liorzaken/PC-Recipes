@@ -46,8 +46,8 @@
 
 		<!-- <div id="questions">-->
 		<%
-	while (flag != 17) {
-			i = r.nextInt(18);
+	while (flag != 16) {
+			i = r.nextInt(17);
 			if (qFinish[i] == 0) {
 				qFinish[i]++;
 				flag++;
