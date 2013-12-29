@@ -27,7 +27,11 @@ public final class DataBaseManager
     {
     	pm.makePersistent(r);
     }
-   
+    
+    public void deleteRecipe(Recipe r)
+    {
+    	pm.deletePersistent(r);
+    }
 /*	public Recipe getRecipe(String recipeName)
     {
     	System.out.println("getting Recipe" + recipeName);
