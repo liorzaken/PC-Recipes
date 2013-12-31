@@ -58,7 +58,7 @@ public final class DataBaseManager
     }
 
 	public List<Products> getProd(String nameProd) {
-    	System.out.println("getting Prod" + nameProd);
+    	System.out.println("getting Prod " + nameProd);
     	Query q = pm.newQuery(Products.class);
     	q.setFilter("_nameProd==theNameProd");
     	q.declareParameters("String theNameProd");

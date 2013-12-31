@@ -36,19 +36,27 @@ public class FilterProdServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Object Item = request.getParameter("addItem");
+		response.setContentType("text/html; charset=UTF-8");
+		Object Item = request.getParameter("value");
 
 		if(Item.toString() !=null)
 		{
-			Search p = new Search();
+			Search s = new Search();
+			
 			List<Products> list;
 			list = DataBaseManager.getInstance().getProd(Item.toString());
 			if(!list.isEmpty())
 				for(Products item:list){
-					p.insertProd(item.get_nameProd());
+					s.insertProd(item.get_nameProd());
+					response.getWriter().write(item.get_nameProd());
 					break;
 				}
+			else{
+				response.getWriter().write("0");
+			}
+			
 		}
+		
 	}
 
 	/**

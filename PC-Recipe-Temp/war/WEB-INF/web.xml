@@ -44,7 +44,9 @@
    <servlet-name>AddRecipeServlet</servlet-name>
     <url-pattern>/AddRecipe</url-pattern>
   </servlet-mapping>
-  <servlet>
+
+  
+      <servlet>
     <servlet-name>FilterProdServlet</servlet-name>
     <servlet-class>pcrecipes.servlet.FilterProdServlet</servlet-class>
   </servlet>

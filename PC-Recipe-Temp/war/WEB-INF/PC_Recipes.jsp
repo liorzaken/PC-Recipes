@@ -34,13 +34,14 @@
 	%>
 		
 
-	<script type="text/javascript" language="javascript" src="jQuery.js"></script>
+	<script type="text/javascript" language="javascript" src="script.js"></script>
 	<%@ include file="/WEB-INF/header.jsp"%>
 	<div id="addProduct">
 		<h2 align=center>הוסף מרכיב</h2>
-		<form action = "FilterProd" method="get">
+		<!-- <form action = "FilterProd" method="get">-->
+		
 			<input type="text" name="addItem" value="כתוב כאן">
-		</form>
+		<!--</form>-->
 		<button id="addProd">הוסף</button>
 		<br/>
 		<div class="listProd"></div>
@@ -59,11 +60,11 @@
 			<%=i%>.<%=questionsArray[i].getQuestion()%>
 		</h2>
 		<ul id="answer">
-			<li class="ans_choice"><%=arrayAnswer[questionsArray[i].getAnswerID()[0]]%></li>
-			<li class="ans_choice"><%=arrayAnswer[questionsArray[i].getAnswerID()[1]]%></li>
-			<li class="ans_choice"><%=arrayAnswer[questionsArray[i].getAnswerID()[2]]%></li>
-			<li class="ans_choice"><%=arrayAnswer[questionsArray[i].getAnswerID()[3]]%></li>
-			<li class="ans_choice"><%=arrayAnswer[questionsArray[i].getAnswerID()[4]]%></li>
+			<li class="ans_choice"><div id="ans1"><%=arrayAnswer[questionsArray[i].getAnswerID()[0]]%></div></li>
+			<li class="ans_choice"><div id="ans2"><%=arrayAnswer[questionsArray[i].getAnswerID()[1]]%></div></li>
+			<li class="ans_choice"><div id="ans3"><%=arrayAnswer[questionsArray[i].getAnswerID()[2]]%></div></li>
+			<li class="ans_choice"><div id="ans4"><%=arrayAnswer[questionsArray[i].getAnswerID()[3]]%></div></li>
+			<li class="ans_choice"><div id="ans5"><%=arrayAnswer[questionsArray[i].getAnswerID()[4]]%></div></li>
 		</ul>
 		<%
 		}
