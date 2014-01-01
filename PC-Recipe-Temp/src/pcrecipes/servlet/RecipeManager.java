@@ -27,12 +27,6 @@ public class RecipeManager extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Object nameR = request.getParameter("recipeName");
 		Object ansNumR = request.getParameter("ansNum");
 		Object productsR = request.getParameter("products");
@@ -70,5 +64,12 @@ public class RecipeManager extends HttpServlet {
 		}
 		response.sendRedirect("RecipePage");
 
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 	}
 }

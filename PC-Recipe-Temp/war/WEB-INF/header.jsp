@@ -19,9 +19,8 @@
 </div>
 <div id="header2">
 	<div id="search">
-		<form action= "Search">
-				חיפוש מתכון: <input type="text" name="SearchItem" value="כתוב כאן">
-				<input type="submit" value="חפש">
-			</form>
+		
+			חיפוש מתכון: <input type="text" name="SearchItem1" value="כתוב כאן">
+				<button id="searchButton1">חפש</button>
 	</div>
 </div>

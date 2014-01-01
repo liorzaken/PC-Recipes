@@ -8,7 +8,7 @@
 <title>Recipe Manager</title>
 </head>
 <body>
-	<form action="AddRecipe" method="post">
+	<form action="AddRecipe" method="get">
 		<p>שם מתכון:</p>
 		<input type="text" name="recipeName">
 		<p>מספרי תשובות:</p>

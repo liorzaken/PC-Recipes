@@ -36,6 +36,15 @@
   </servlet-mapping>
   
   <servlet>
+    <servlet-name>FirstLoadServlet</servlet-name>
+    <servlet-class>pcrecipes.servlet.FirstLoadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>FirstLoadServlet</servlet-name>
+    <url-pattern>/FirstLoad</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>AddRecipeServlet</servlet-name>
     <servlet-class>pcrecipes.servlet.RecipeManager</servlet-class>
   </servlet>
@@ -54,6 +63,16 @@
   <servlet-mapping>
    <servlet-name>FilterProdServlet</servlet-name>
     <url-pattern>/FilterProd</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>FilterRecipeNameServlet</servlet-name>
+    <servlet-class>pcrecipes.servlet.FilterRecipeNameServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>FilterRecipeNameServlet</servlet-name>
+    <url-pattern>/FilterRecipeName</url-pattern>
   </servlet-mapping>
   
   <servlet>

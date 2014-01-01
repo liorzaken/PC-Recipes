@@ -72,7 +72,7 @@
 	%>
 	</div>
 	
-	<div id="mainFrameResults">
+	<div id="mainFrameResults" class= "listRecipe">
 		<h2 align=center>תוצאות חיפוש</h2>
 	</div>
 	<div id="footer2"></div>

@@ -65,5 +65,12 @@ public final class DataBaseManager
     	return (List<Products>)q.execute(nameProd);
 	}
 	
+	public List<Recipe> getRecipe(String nameRecipe) {
+    	System.out.println("getting Recipe " + nameRecipe);
+    	Query q = pm.newQuery(Recipe.class);
+    	q.setFilter("_nameRecipe == theNameRecipe");
+    	q.declareParameters("String theNameRecipe");
+    	return (List<Recipe>)q.execute(nameRecipe);
+	}
 
 }
