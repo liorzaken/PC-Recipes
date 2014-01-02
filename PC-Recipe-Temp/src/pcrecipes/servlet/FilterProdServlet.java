@@ -2,8 +2,6 @@ package pcrecipes.servlet;
 //package pcrecipes.server;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 
 import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
@@ -12,9 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dbManager.DataBaseManager;
-import pcrecipes.server.Products;
-import pcrecipes.server.Recipe;
-import pcrecipes.server.Search;
 
 /**
  * Servlet implementation class FilterProdServlet
@@ -41,31 +36,18 @@ public class FilterProdServlet extends HttpServlet {
 
 		if(Item.toString() !=null)
 		{
-			Search s = new Search();
-			
-			List<Products> list;
-			list = DataBaseManager.getInstance().getProd(Item.toString());
-			if(!list.isEmpty())
-				for(Products item:list){
-					s.insertProd(item.get_nameProd());
-					response.getWriter().write(item.get_nameProd());
-					break;
-				}
+			boolean bool=false;
+			bool = DataBaseManager.getInstance().getProd(Item.toString());
+			if(bool){
+				response.getWriter().write("1");
+			}
 			else{
 				response.getWriter().write("0");
 			}
-			
 		}
-		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
 	}
 }
 

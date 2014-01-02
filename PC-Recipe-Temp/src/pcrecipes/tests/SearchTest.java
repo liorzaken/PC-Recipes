@@ -1,12 +1,11 @@
 package pcrecipes.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
 import org.junit.Test;
 
-import pcrecipes.server.ProductExtend;
 import pcrecipes.server.Recipe;
 import pcrecipes.server.Search;
 import dbManager.DataBaseManager;
@@ -15,7 +14,6 @@ public class SearchTest {
 
 	private Search search;
 	private Recipe recipe1, recipe2;
-	private ProductExtend first, second, third;
 	private List<Recipe> results;
 	private Boolean isTrue;
 	
@@ -219,22 +217,18 @@ public class SearchTest {
 	}
 	*/
 	public void add2Recipes (){
-		first = new ProductExtend("One", "1");
-		second = new ProductExtend("Two", "2");
-		third = new ProductExtend("Three", "3");
-		ProductExtend[] prodList1 = {first, third};
-		ProductExtend[] prodList2 = {second};
+		String firstprods = "One,Two";
+		String firstunit = "1,2";
+		String scondprods = "Three";
+		String secondunit = "3";
 		int[] category1 = {9, 34, 21, 3, 43};
 		int[] category2 = {49, 26, 12, 2, 31};
-		recipe1 = new Recipe("Fun", prodList1, second.get_prod().get_nameProd(), category1, "sfgnbgfb rgbrgt rthbrbdfgjrn nrhn renb gr sgn.");
-		recipe2 = new Recipe("Long", prodList2, first.get_prod().get_nameProd(), category2, "dfgn njyk wef ergiug fgeruvb erkgervbkrehgbiu ergiug.");
+		recipe1 = new Recipe("Fun", firstprods, firstunit, "none",category1, "sfgnbgfb rgbrgt rthbrbdfgjrn nrhn renb gr sgn.");
+		recipe2 = new Recipe("Long", scondprods, secondunit, "none",category2, "dfgn njyk wef ergiug fgeruvb erkgervbkrehgbiu ergiug.");
 		
 		DataBaseManager.getInstance().insertNewRecipe(recipe1);
 		DataBaseManager.getInstance().insertNewRecipe(recipe2);
 	}
-	public void delete2Recipes(){
-		DataBaseManager.getInstance().deleteRecipe(recipe1);
-		DataBaseManager.getInstance().deleteRecipe(recipe1);
-	}
+
 
 }

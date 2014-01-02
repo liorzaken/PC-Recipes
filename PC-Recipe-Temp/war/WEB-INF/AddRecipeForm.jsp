@@ -1,10 +1,11 @@
 <%@ page import="pcrecipes.server.Recipe"%>
 <%@page import="java.util.List;"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Language" content="he" />
+<meta http-equiv="Content-Language" content="he" />
 <title>Recipe Manager</title>
 </head>
 <body>
@@ -12,14 +13,13 @@
 		<p>שם מתכון:</p>
 		<input type="text" name="recipeName">
 		<p>מספרי תשובות:</p>
-		<input type="text" name="ansNum" size="100" maxlength="200" />
+		<input type="text" name="category" size="100" maxlength="200" />
 		<p>מצרכים:</p>
-<!-- 		<textarea name="text" rows="6" cols="50"></textarea>-->
-		<textarea  name="products" rows="4" cols="65" ></textarea>
+		<textarea name="products" rows="4" cols="65"></textarea>
 		<p>כמויות ויחידות:</p>
-		<textarea name="amountUnit" rows="4" cols="65"  ></textarea>
+		<textarea name="amountUnit" rows="4" cols="65"></textarea>
 		<p>תחליפים:</p>
-		<textarea name="productSwap" rows="4" cols="65"  ></textarea>
+		<textarea name="productSwap" rows="4" cols="65"></textarea>
 		<p>הוראות הכנה:</p>
 		<textarea name="Instruction" rows="8" cols="65"></textarea>
 		<p>שליחה</p>

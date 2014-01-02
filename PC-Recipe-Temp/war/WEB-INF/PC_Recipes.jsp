@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+<link type="text/css" rel="stylesheet" href="style/stylesheet.css" />
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
 <meta http-equiv="Content-Language" content="he" />
@@ -34,7 +34,7 @@
 	%>
 		
 
-	<script type="text/javascript" language="javascript" src="script.js"></script>
+	<script type="text/javascript" language="javascript" src="script/script.js"></script>
 	<%@ include file="/WEB-INF/header.jsp"%>
 	<div id="addProduct">
 		<h2 align=center>הוסף מרכיב</h2>

@@ -1,5 +1,3 @@
-<%@ page import="pcrecipes.server.Products"%>
-<%@ page import="pcrecipes.server.ProductExtend"%>
 <%@ page import="pcrecipes.server.Recipe"%>
 <%@page import="dbManager.DataBaseManager"%>
 <%@page import="java.util.List;"%>
@@ -9,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+<link type="text/css" rel="stylesheet" href="style/stylesheet.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
 <meta http-equiv="Content-Language" content="he" />
@@ -58,12 +56,12 @@
 		<p>מצרכים:</p>
 		<table>
 			<%
-				for (int i = 0; i < item.get_Products().length; i++) {
+				for (int i = 0; i < item._products.length; i++) {
 			%>
 			<tr>
 				<td><%=i + 1%>.</td>
-				<td><%=item.get_Products()[i].get_prod().get_nameProd()%></td>
-				<td><%=item.get_Products()[i].get_amountUnit()%></td>
+				<td><%=item._products[i]%></td>
+				<td><%=item._unit[i]%></td>
 			</tr>
 			<%
 				}

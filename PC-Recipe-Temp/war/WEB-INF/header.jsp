@@ -5,11 +5,11 @@
 		<div id="menu">
 			<ul>
 				<li><a href="Main">דף הבית</a></li>
-				<li><a href="MyAccount.jsp">החשבון שלי</a></li>
-				<li><a href="Tips.jsp">טיפים</a></li>
-				<li><a href="ContactUs.jsp">צור קשר</a></li>
-				<li><a href="Help.jsp">עזרה</a></li>
-				<li><a href="About.jsp">אודות</a></li>
+				<li><a href="MyAccount">החשבון שלי</a></li>
+				<li><a href="Tips">טיפים</a></li>
+				<li><a href="ContactUs">צור קשר</a></li>
+				<li><a href="Help">עזרה</a></li>
+				<li><a href="About">אודות</a></li>
 			</ul>	
 		</div>
 	</div>
