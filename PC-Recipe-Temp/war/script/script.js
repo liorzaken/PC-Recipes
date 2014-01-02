@@ -22,7 +22,6 @@ $(document).ready( function() {
 			}
 		},
 		error: function(e){  
-			//handle error
 		} 
 	});
 
@@ -80,30 +79,28 @@ $(document).ready( function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
-//		changeQeustion();
+		changeQeustion();
 	});
 	$('#ans2').click(function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
-//		changeQeustion();
+		changeQeustion();
 	});
 	$('#ans3').click(function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
-//		changeQeustion();
+		changeQeustion();
 	});
 	$('#ans4').click(function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
-//		changeQeustion();
+		changeQeustion();
 	});
 	$('#ans5').click(function() {
-		//	newAns = $(this).text();
-		searchByCategory();
-//		changeQeustion();
+		changeQeustion();
 	});
 
 	function  searchByCategory(){
@@ -123,9 +120,6 @@ $(document).ready( function() {
 			}
 		});
 	}
-
-
-
 	$('#searchButton1').click(function() {
 		var newRecipe = $('input[name=SearchItem1]').val();
 		var dataString = "value=" + newRecipe;
@@ -148,14 +142,12 @@ $(document).ready( function() {
 				$('#ProdsView').remove();
 				$('.listProd').append('<div id=ProdsView></div>');
 				$('input[name=SearchItem1]').val("כתוב כאן");
-				//handle returned arrayList
 			},
 			error: function(e){  
-				//handle error
 			} 
 		});
 	});
-
+	
 	function  intersection(){
 
 		var catStr ="";
@@ -187,10 +179,8 @@ $(document).ready( function() {
 				}
 			},
 			error: function(e){  
-				//handle error
 			} 
 		});
-
 	}
 	$('#clearSearch').click(function() {
 		prods = [];
@@ -210,27 +200,25 @@ $(document).ready( function() {
 		$('input[name=SearchItem1]').val("כתוב כאן");
 		intersection();
 	});
-
-
-
-
 });
 
 function changeQeustion (){
-/*	$.ajax({
-		type: "POST", 
-		url:  "/displayQuestion",
+	$.ajax({
+		type: "GET", 
+		url:  "/DisplayQuestion",
 		success: function(ret){
-
+			var QuestArr = ret.split(',');
+			$('#question').text(QuestArr[0]);
+			$('#ans1').text(QuestArr[1]);
+			$('#ans2').text(QuestArr[2]);
+			$('#ans3').text(QuestArr[3]);
+			$('#ans4').text(QuestArr[4]);
+			$('#ans5').text(QuestArr[5]);
 		},
-	error: function(e){
-	}
+		error: function(e){
+		}
 	});
-	
-	*/
 }
-
-
 
 function display(array){
 
@@ -240,9 +228,3 @@ function display(array){
 		$('#RecipesView').append('<div id="itemRec"><a href="/Search?SearchItem='+array[i]+'" target="_blank">'+array[i]+'</a></div>');
 	}
 }
-
-
-
-
-
-

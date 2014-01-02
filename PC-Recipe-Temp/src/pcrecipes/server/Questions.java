@@ -4,31 +4,31 @@ public class Questions {
 	
 	private final static int MAX_ANSWERS = 101;
 	private final static int NUM_OF_QUE = 18;
-	private String question;
-	private int [] answerID; // Array Of Answer`s ID
+	private String _question;
+	private int [] _answerID; // Array Of Answer`s ID
 	
 
 	
 	public Questions(String questions, int ID0, int ID1, int ID2, int ID3, int ID4) {
 
-		this.question = questions;
-		this.answerID=new int[5];
-		this.answerID[0] = ID0;
-		this.answerID[1] = ID1;
-		this.answerID[2] = ID2;
-		this.answerID[3] = ID3;
-		this.answerID[4] = ID4;
+		this._question = questions;
+		this._answerID=new int[5];
+		this._answerID[0] = ID0;
+		this._answerID[1] = ID1;
+		this._answerID[2] = ID2;
+		this._answerID[3] = ID3;
+		this._answerID[4] = ID4;
 	}
 	public Questions(){
 		
 	}
 
 	public String getQuestion() {
-		return question;
+		return _question;
 	}
 
 	public int[] getAnswerID() {
-		return answerID;
+		return _answerID;
 	}
 	
 	public Questions [] inputQuest(){
@@ -129,7 +129,15 @@ public class Questions {
 		return answersArray;
 	
 	}
-	
-	
+	@Override
+	public String toString(){
+		String str = "";
+		str+=_question+",";
+		
+		for(int i=0; i<_answerID.length; i++)
+			str+=_answerID[i]+",";
+		return str;
+		
+	}
 
 }

@@ -76,6 +76,15 @@
 		<servlet-name>FilterProdServlet</servlet-name>
 		<url-pattern>/FilterProd</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DisplayQuestionServlet</servlet-name>
+		<servlet-class>pcrecipes.servlet.DisplayQuestionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayQuestionServlet</servlet-name>
+		<url-pattern>/DisplayQuestion</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>FilterRecipeNameServlet</servlet-name>

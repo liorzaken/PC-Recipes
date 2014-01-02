@@ -31,7 +31,7 @@
 		arrayAnswer = q.inputAnswer();
 		//Search searchArr = new Search();	
 		//	q.inputQuest(questionsArray);
-	%> 
+	%>
 
 
 	<script type="text/javascript" language="javascript"
@@ -50,25 +50,19 @@
 		<br />
 		<div class="listProd"></div>
 	</div>
-<div class="FrameQuestion">
-<div id="mainFrameQuestion">
-		<%
-	
-		i = r.nextInt(17);
-
-	%>
-
+	<div class="FrameQuestion">
+		<div id="mainFrameQuestion">
 			<h2 id="question" align=center>
-				<%=questionsArray[i].getQuestion()%>
+				<%=questionsArray[0].getQuestion()%>
 			</h2>
 			<ul id="answer">
-				<li class="ans_choice"><div id="ans1"><%=arrayAnswer[questionsArray[i].getAnswerID()[0]]%></div></li>
-				<li class="ans_choice"><div id="ans2"><%=arrayAnswer[questionsArray[i].getAnswerID()[1]]%></div></li>
-				<li class="ans_choice"><div id="ans3"><%=arrayAnswer[questionsArray[i].getAnswerID()[2]]%></div></li>
-				<li class="ans_choice"><div id="ans4"><%=arrayAnswer[questionsArray[i].getAnswerID()[3]]%></div></li>
-				<li class="ans_choice"><div id="ans5"><%=arrayAnswer[questionsArray[i].getAnswerID()[4]]%></div></li>
+				<li class="ans_choice"><div id="ans1"><%=arrayAnswer[questionsArray[0].getAnswerID()[0]]%></div></li>
+				<li class="ans_choice"><div id="ans2"><%=arrayAnswer[questionsArray[0].getAnswerID()[1]]%></div></li>
+				<li class="ans_choice"><div id="ans3"><%=arrayAnswer[questionsArray[0].getAnswerID()[2]]%></div></li>
+				<li class="ans_choice"><div id="ans4"><%=arrayAnswer[questionsArray[0].getAnswerID()[3]]%></div></li>
+				<li class="ans_choice"><div id="ans5"><%=arrayAnswer[questionsArray[0].getAnswerID()[4]]%></div></li>
 			</ul>
-		
+
 		</div>
 	</div>
 
