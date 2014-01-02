@@ -9,7 +9,7 @@
 <title>Recipe Manager</title>
 </head>
 <body>
-	<form action="AddRecipe" method="get">
+	<form action="AddRecipe" method="post">
 		<p>שם מתכון:</p>
 		<input type="text" name="recipeName">
 		<p>מספרי תשובות:</p>
@@ -21,7 +21,7 @@
 		<p>תחליפים:</p>
 		<textarea name="productSwap" rows="4" cols="65"></textarea>
 		<p>הוראות הכנה:</p>
-		<textarea name="Instruction" rows="8" cols="65"></textarea>
+		<textarea name="Instruction" rows="20" cols="65" maxlength="2000"></textarea>
 		<p>שליחה</p>
 		<input type="submit" name="Submit" value="submit"> <input
 			type="reset" value="reset">

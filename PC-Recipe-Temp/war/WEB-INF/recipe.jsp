@@ -75,7 +75,7 @@
 
 		<p>אופן ההכנה:</p>
 		<p>
-			<%=item.get_instruction()%>
+			<%=item.get_instruction().getValue()%>
 		</p>
 	</div>
 

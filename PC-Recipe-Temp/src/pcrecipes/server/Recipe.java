@@ -3,6 +3,8 @@ package pcrecipes.server;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
+import com.google.appengine.api.datastore.Text;
+
 @PersistenceCapable
 public class Recipe {
 //	private static int IDCount = 0;
@@ -20,7 +22,7 @@ public class Recipe {
 	@Persistent
 	public int[] _category;
 	@Persistent
-	public String _instruction;
+	public Text _instruction;
 /*
 	public Recipe(String nameRecipe, 
 			ProductExtend[] products, String swapProd, int[] category,
@@ -39,7 +41,7 @@ public class Recipe {
 	
 	public Recipe(String nameRecipe, 
 			String products,String unit, String swapProd, int[] category,
-			String instruction) {
+			Text instruction) {
 
 //		this._id = ++IDCount;
 		this._nameRecipe = nameRecipe;
@@ -60,7 +62,7 @@ public class Recipe {
 //	public ProductExtend[] get_Products() { return _products; }
 	public String get_swapProd() { return _swapProd; }
 	public int[] get_category() { return _category; }
-	public String get_instruction() { return _instruction; }
+	public Text get_instruction() { return _instruction; }
 /*
 	public String prodString() {
 		String temp = "";

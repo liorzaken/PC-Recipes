@@ -1,43 +1,36 @@
+var recipe = [];
+var prods = [];
+var categorys = [];
+var i=0;
+var recipeProd = [];
+var recipeCategory = [];
 
+var x=0;
+//first load list from all recipes
 $(document).ready( function() {
+
+	$('.listProd').append('<div id=ProdsView></div>');
 	$('.listRecipe').append('<div id=RecipesView></div>');
-//	$('#RecipeView').text("");
+
 	$.ajax({
 		url: "/FirstLoad",
 		type: "GET",
-//		data: dataString,
 		success: function(ret){ 
 			if(ret=="0"){
 				alert(newRecipe + " לא קיים במערכת");
 			}
 			else{
-				var recipeArr = ret.split(',');
-				$('#RecipesView').remove();
-				for ( var i = 0; i < recipeArr.length; i = i + 1 ) {
-					recipe.push(recipeArr[i]);
-					$('.listRecipe').append('<div id=RecipesView></div>');
-					$('#RecipesView').append('<div id="itemRec"><a href="/Search?SearchItem='+recipeArr[i]+'" target="_blank">'+recipeArr[i]+'</a></div>');
-				}
+				recipe = ret.split(',');
+				display(recipe);
 			}
-//			$('input[name=SearchItem1]').val("");
-			//handle returned arrayList
 		},
 		error: function(e){  
-			alert("error");
 			//handle error
 		} 
 	});
-	
-	
-});
 
-//מחפש האם מוצר קיים במערכת
-var prods = [];
-var ans = [];
-var recipe = [];
-$(document).ready(function() {
+//	search by products
 	$('#addProd').click(function() {
-
 		var newProd = $('input[name=addItem]').val();
 		var dataString = "value=" + newProd;
 		$.ajax({
@@ -50,60 +43,87 @@ $(document).ready(function() {
 				}
 				else{
 					prods.push(newProd);
-					$('.listProd').append('<div class="item">'+newProd+ '</div>');
+
+					$('#ProdsView').append('<div class="item">'+newProd+ '</div>');
+					searchByProd();
 				}
-				$('input[name=addItem]').val("");
+				$('input[name=addItem]').val("כתוב כאן");
 				//handle returned arrayList
 			},
 			error: function(e){  
-				alert("error");
 				//handle error
 			} 
 		});
 
+		//find all recipes with all products
+		function  searchByProd(){
+			var str ="";
+			for(var t=0; t<prods.length; t= t+1){
+				str +=prods[t]+",";
+			}
+			var dataString = "Prod=" + str;
+			$.ajax({
+				type: "GET", 
+				url:  "/FilterRecipeByProd",
+				data: dataString,
+				success: function(ret){
+
+					recipeProd = ret.split(',');
+					intersection();
+
+				}
+			});
+		}
 	});
-});
 
 
-//לכתוב את הפונקציה השניה שמציגה את הסינון
-$(document).ready(function() {
+//	answer handler
 	var newAns="";
-//	$('.ans_choice').click(function() {
-		$('#ans1').click(function() {
-			newAns = $(this).text();
-			ans.push(newAns);
-			alert(ans);
+	$('#ans1').click(function() {
+		newAns = $(this).text();
+		categorys.push(newAns);
+		searchByCategory();
+	});
+	$('#ans2').click(function() {
+		newAns = $(this).text();
+		categorys.push(newAns);
+		searchByCategory();
+	});
+	$('#ans3').click(function() {
+		newAns = $(this).text();
+		categorys.push(newAns);
+		searchByCategory();
+	});
+	$('#ans4').click(function() {
+		newAns = $(this).text();
+		categorys.push(newAns);
+		searchByCategory();
+	});
+	$('#ans5').click(function() {
+		//	newAns = $(this).text();
+		searchByCategory();
+	});
+
+	function  searchByCategory(){
+		var str ="";
+		for(var t=0; t<categorys.length; t= t+1){
+			str +=categorys[t]+",";
+		}
+		var dataString = "Category=" + str;
+		$.ajax({
+			type: "GET", 
+			url:  "/FilterByCategory",
+			data: dataString,
+			success: function(ret){
+
+				recipeCategory = ret.split(',');
+				intersection();
+			}
 		});
-		$('#ans2').click(function() {
-			newAns = $(this).text();
-			ans.push(newAns);
-			alert(ans);
-		});
-		$('#ans3').click(function() {
-			newAns = $(this).text();
-			ans.push(newAns);
-			alert(ans);
-		});
-		$('#ans4').click(function() {
-			newAns = $(this).text();
-			ans.push(newAns);
-			alert(ans);
-		});
-		
-		$('#ans5').click(function() {
-			newAns = $(this).text();
-			alert(ans);
-		});
-		
-//	});
-});
+	}
 
 
 
-
-//מחפש מתכונים
-
-$(document).ready(function() {
 	$('#searchButton1').click(function() {
 		var newRecipe = $('input[name=SearchItem1]').val();
 		var dataString = "value=" + newRecipe;
@@ -117,47 +137,76 @@ $(document).ready(function() {
 				}
 				else{
 					var recipeArr = ret.split(',');
-					$('#RecipesView').remove();
-					for ( var i = 0; i < recipeArr.length; i = i + 1 ) {
-						recipe.push(recipeArr[i]);
-						$('.listRecipe').append('<div id=RecipesView></div>');
-						$('#RecipesView').append('<div id="itemRec"><a href="/Search?SearchItem='+recipeArr[i]+'">'+recipeArr[i]+'</a></div>');
-					}
+					display(recipeArr);
 				}
-				$('input[name=SearchItem1]').val("");
+				prods=[];
+				categorys=[];
+				$('#ProdsView').remove();
+				$('.listProd').append('<div id=ProdsView></div>');
+				$('input[name=SearchItem1]').val("כתוב כאן");
 				//handle returned arrayList
 			},
 			error: function(e){  
-				alert("error");
 				//handle error
 			} 
 		});
-
 	});
 
-
-});
-
-$(document).ready(function() {
-	$('#itemRec').click(function() {
-
-		var recipeToSearch = $(this).text();
-		var dataString = "recipeSearch=" + recipeToSearch;
-		$.ajax({
-			url: "/Search",
-			type: "GET",
-			data: dataString,
-			success: function(ret){ 
-				//if(ret=="0"){
-					alert(newProd + " לא קיים במערכת");
-				//}
+	function  intersection(){
 				
+		var catStr ="";
+		for(var t=0; t < recipeCategory.length; t= t+1){
+			catStr += recipeCategory[t]+",";
+		}
+		var prodsStr ="";
+		for(var t=0; t < recipeProd.length; t= t+1){
+			prodsStr += recipeProd[t]+",";
+		}
+		var dataString = {catVal:  catStr , prodVal:prodsStr};
+		$.ajax({
+			type: "GET", 
+			url:  "/Intersection",
+			data: dataString,
+			success: function(ret){
+				if(ret=="1"){
+					display(recipe);
+				}
+				else if(ret=="2"){
+					display(recipeProd);
+				}
+				else if(ret=="3"){
+					display(recipeCategory);
+				}
+				else{
+					var newArr = ret.split(',');
+					display(newArr);
+				}
 			},
 			error: function(e){  
-				alert("error");
 				//handle error
 			} 
 		});
 
-	});
+	}
+
+
 });
+
+
+
+
+
+function display(array){
+
+	$('#RecipesView').remove();
+	$('.listRecipe').append('<div id=RecipesView></div>');
+	for ( var t = 0; t < array.length; t = t + 1 ) {
+		$('#RecipesView').append('<div id="itemRec"><a href="/Search?SearchItem='+array[t]+'">'+array[t]+'</a></div>');
+	}
+}
+
+
+
+
+
+

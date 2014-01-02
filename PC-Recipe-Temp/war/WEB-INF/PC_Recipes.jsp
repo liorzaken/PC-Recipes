@@ -40,7 +40,7 @@
 		<h2 align=center>הוסף מרכיב</h2>
 		<!-- <form action = "FilterProd" method="get">-->
 		
-			<input type="text" name="addItem" value="כתוב כאן">
+			<input type="text" name="addItem" value="כתוב כאן" onfocus="if(this.value == 'כתוב כאן') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'כתוב כאן'; }">
 		<!--</form>-->
 		<button id="addProd">הוסף</button>
 		<br/>
@@ -50,25 +50,25 @@
 
 		<!-- <div id="questions">-->
 		<%
-	while (flag != 16) {
-			i = r.nextInt(17);
-			if (qFinish[i] == 0) {
-				qFinish[i]++;
-				flag++;
+//	while (flag != 16) {
+//			i = r.nextInt(17);
+//			if (qFinish[i] == 0) {
+//				qFinish[i]++;
+//				flag++;
 	%>
 		<h2 id="question" align=center>
-			<%=i%>.<%=questionsArray[i].getQuestion()%>
+			<%=1%>.<%=questionsArray[0].getQuestion()%>
 		</h2>
 		<ul id="answer">
-			<li class="ans_choice"><div id="ans1"><%=arrayAnswer[questionsArray[i].getAnswerID()[0]]%></div></li>
-			<li class="ans_choice"><div id="ans2"><%=arrayAnswer[questionsArray[i].getAnswerID()[1]]%></div></li>
-			<li class="ans_choice"><div id="ans3"><%=arrayAnswer[questionsArray[i].getAnswerID()[2]]%></div></li>
-			<li class="ans_choice"><div id="ans4"><%=arrayAnswer[questionsArray[i].getAnswerID()[3]]%></div></li>
-			<li class="ans_choice"><div id="ans5"><%=arrayAnswer[questionsArray[i].getAnswerID()[4]]%></div></li>
+			<li class="ans_choice"><div id="ans1"><%=arrayAnswer[questionsArray[0].getAnswerID()[0]]%></div></li>
+			<li class="ans_choice"><div id="ans2"><%=arrayAnswer[questionsArray[0].getAnswerID()[1]]%></div></li>
+			<li class="ans_choice"><div id="ans3"><%=arrayAnswer[questionsArray[0].getAnswerID()[2]]%></div></li>
+			<li class="ans_choice"><div id="ans4"><%=arrayAnswer[questionsArray[0].getAnswerID()[3]]%></div></li>
+			<li class="ans_choice"><div id="ans5"><%=arrayAnswer[questionsArray[0].getAnswerID()[4]]%></div></li>
 		</ul>
 		<%
-		}
-		}
+//		}
+//		}
 	%>
 	</div>
 	

@@ -40,6 +40,24 @@
 		<servlet-name>FirstLoadServlet</servlet-name>
 		<url-pattern>/FirstLoad</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FilterRecipeByProdServlet</servlet-name>
+		<servlet-class>pcrecipes.servlet.FilterRecipeByProdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FilterRecipeByProdServlet</servlet-name>
+		<url-pattern>/FilterRecipeByProd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>IntersectionServlet</servlet-name>
+		<servlet-class>pcrecipes.servlet.IntersectionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IntersectionServlet</servlet-name>
+		<url-pattern>/Intersection</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>AddRecipeServlet</servlet-name>
@@ -66,6 +84,15 @@
 	<servlet-mapping>
 		<servlet-name>FilterRecipeNameServlet</servlet-name>
 		<url-pattern>/FilterRecipeName</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FilterByCategoryServlet</servlet-name>
+		<servlet-class>pcrecipes.servlet.FilterByCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FilterByCategoryServlet</servlet-name>
+		<url-pattern>/FilterByCategory</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
