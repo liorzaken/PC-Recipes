@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.google.appengine.api.datastore.Text;
+
 import pcrecipes.server.Recipe;
 
 
@@ -30,12 +32,13 @@ public class PcRecipesTest {
 	@Test
 	public void recipeCreateTest() {
 		int[] category = {23, 43, 10, 8, 16, 36};
-		Recipe recipe = new Recipe("One", "first,second,third", "1,2,3", "fourth", category, "gdrtjhrv t thge hggrhbdfbstdhbsrt bsr");
+		
+		Recipe recipe = new Recipe("One", "first,second,third", "1,2,3", "fourth", category, new Text("gdrtjhrv t thge hggrhbdfbstdhbsrt bsr"));
 		
 		assertEquals(recipe.get_nameRecipe(), "One");
 		assertArrayEquals(recipe.get_category(), category);
 		assertEquals(recipe.get_swapProd(), "fourth");
-		assertEquals(recipe.get_instruction(), "gdrtjhrv t thge hggrhbdfbstdhbsrt bsr");
+		assertEquals(recipe.get_instruction(), new Text("gdrtjhrv t thge hggrhbdfbstdhbsrt bsr"));
 	}
 	
 	/*	*

@@ -25,7 +25,7 @@ public final class DataBaseManager
 	{
 		pm.makePersistent(r);
 	}
-
+	@SuppressWarnings("unchecked")
 	public List<Recipe> getRecipeByName(String nameRecipe)
 	{
 		System.out.println("getting Recipe " + nameRecipe);

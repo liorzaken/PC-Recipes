@@ -2,8 +2,8 @@ package pcrecipes.server;
 
 public class Questions {
 	
-	private final static int MAX_ANSWERS = 200;
-	private final static int NUM_OF_QUE = 10;
+	private final static int MAX_ANSWERS = 101;
+	private final static int NUM_OF_QUE = 18;
 	private String question;
 	private int [] answerID; // Array Of Answer`s ID
 	
@@ -32,7 +32,7 @@ public class Questions {
 	}
 	
 	public Questions [] inputQuest(){
-		Questions [] questionsArray=new Questions[18];
+		Questions [] questionsArray=new Questions[NUM_OF_QUE];
 		questionsArray[0] = new Questions("מהו סוג הבישול הרצוי?", 1,2,3,100,0);	
 		questionsArray[1] = new Questions("איזה ארוחה תרצה להכין?", 4,5,6,100,0);
 		questionsArray[2] = new Questions("איזה מנה תרצה להכין?", 7,8,9,100,0);
@@ -124,7 +124,7 @@ public class Questions {
 		answersArray[64] = "";
 		answersArray[65] = "";
 		answersArray[66] = "";
-		answersArray[100] = "";
+		answersArray[100] = ""; //empty question, must stay empty
 		
 		return answersArray;
 	
