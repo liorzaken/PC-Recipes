@@ -157,6 +157,7 @@
 		<servlet-name>TipsJSP</servlet-name>
 		<jsp-file>/WEB-INF/Tips.jsp</jsp-file>
 	</servlet>
+
 	
 	<!-- Default page to serve -->
 	<welcome-file-list>

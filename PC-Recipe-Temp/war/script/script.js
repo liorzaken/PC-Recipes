@@ -1,11 +1,8 @@
 var recipe = [];
 var prods = [];
 var categorys = [];
-var i=0;
 var recipeProd = [];
 var recipeCategory = [];
-
-var x=0;
 //first load list from all recipes
 $(document).ready( function() {
 
@@ -58,8 +55,8 @@ $(document).ready( function() {
 		//find all recipes with all products
 		function  searchByProd(){
 			var str ="";
-			for(var t=0; t<prods.length; t= t+1){
-				str +=prods[t]+",";
+			for(var i=0; i<prods.length; i= i+1){
+				str +=prods[i]+",";
 			}
 			var dataString = "Prod=" + str;
 			$.ajax({
@@ -83,31 +80,36 @@ $(document).ready( function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
+//		changeQeustion();
 	});
 	$('#ans2').click(function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
+//		changeQeustion();
 	});
 	$('#ans3').click(function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
+//		changeQeustion();
 	});
 	$('#ans4').click(function() {
 		newAns = $(this).text();
 		categorys.push(newAns);
 		searchByCategory();
+//		changeQeustion();
 	});
 	$('#ans5').click(function() {
 		//	newAns = $(this).text();
 		searchByCategory();
+//		changeQeustion();
 	});
 
 	function  searchByCategory(){
 		var str ="";
-		for(var t=0; t<categorys.length; t= t+1){
-			str +=categorys[t]+",";
+		for(var i=0; i<categorys.length; i= i+1){
+			str +=categorys[i]+",";
 		}
 		var dataString = "Category=" + str;
 		$.ajax({
@@ -141,6 +143,8 @@ $(document).ready( function() {
 				}
 				prods=[];
 				categorys=[];
+				recipeProd = [];
+				recipeCategory = [];
 				$('#ProdsView').remove();
 				$('.listProd').append('<div id=ProdsView></div>');
 				$('input[name=SearchItem1]').val("כתוב כאן");
@@ -153,14 +157,14 @@ $(document).ready( function() {
 	});
 
 	function  intersection(){
-				
+
 		var catStr ="";
-		for(var t=0; t < recipeCategory.length; t= t+1){
-			catStr += recipeCategory[t]+",";
+		for(var i=0; i < recipeCategory.length; i= i+1){
+			catStr += recipeCategory[i]+",";
 		}
 		var prodsStr ="";
-		for(var t=0; t < recipeProd.length; t= t+1){
-			prodsStr += recipeProd[t]+",";
+		for(var i=0; i < recipeProd.length; i= i+1){
+			prodsStr += recipeProd[i]+",";
 		}
 		var dataString = {catVal:  catStr , prodVal:prodsStr};
 		$.ajax({
@@ -188,11 +192,43 @@ $(document).ready( function() {
 		});
 
 	}
+	$('#clearSearch').click(function() {
+		prods = [];
+		categorys = [];
+		recipeProd = [];
+		recipeCategory = [];
+		$('#ProdsView').remove();
+		$('.listProd').append('<div id=ProdsView></div>');
+		$('input[name=SearchItem1]').val("כתוב כאן");
+		display(recipe);
+	});
+	$('#clearProds').click(function() {
+		prods = [];
+		recipeProd = [];
+		$('#ProdsView').remove();
+		$('.listProd').append('<div id=ProdsView></div>');
+		$('input[name=SearchItem1]').val("כתוב כאן");
+		intersection();
+	});
+
+
 
 
 });
 
+function changeQeustion (){
+/*	$.ajax({
+		type: "POST", 
+		url:  "/displayQuestion",
+		success: function(ret){
 
+		},
+	error: function(e){
+	}
+	});
+	
+	*/
+}
 
 
 
@@ -200,8 +236,8 @@ function display(array){
 
 	$('#RecipesView').remove();
 	$('.listRecipe').append('<div id=RecipesView></div>');
-	for ( var t = 0; t < array.length; t = t + 1 ) {
-		$('#RecipesView').append('<div id="itemRec"><a href="/Search?SearchItem='+array[t]+'">'+array[t]+'</a></div>');
+	for ( var i = 0; i < array.length; i = i + 1 ) {
+		$('#RecipesView').append('<div id="itemRec"><a href="/Search?SearchItem='+array[i]+'" target="_blank">'+array[i]+'</a></div>');
 	}
 }
 
