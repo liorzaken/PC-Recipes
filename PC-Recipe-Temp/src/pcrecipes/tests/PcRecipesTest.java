@@ -10,25 +10,25 @@ import pcrecipes.server.Recipe;
 
 
 public class PcRecipesTest {
-	/*	*
-		*This test will always succeed.
-		**/
+	/*
+	*This test will always succeed.
+	*/
 	@Test
 	public void searchPassTest() {
 		
 	}
 	
-	/*	*
-		*This test will always fail.
-		**/
+	/*
+	*This test will always fail.
+	*/
 	/*@Test
 	public void searchFailTest() {
 		fail();
 	}*/
 	
-	/*	*
-	*This test will always succeed.
-	**/
+	/*
+	*This tests the creation of a new recipe.
+	*/
 	@Test
 	public void recipeCreateTest() {
 		int[] category = {23, 43, 10, 8, 16, 36};
@@ -41,9 +41,9 @@ public class PcRecipesTest {
 		assertEquals(recipe.get_instruction(), new Text("gdrtjhrv t thge hggrhbdfbstdhbsrt bsr"));
 	}
 	
-	/*	*
+	/*
 	*This test searches for all recipes.
-	**/
+	*/
 	/*@Test
 	public void searchTest() {
 		HttpServletRequest request = mock(HttpServletRequest.class);       
@@ -74,7 +74,7 @@ public class PcRecipesTest {
 			else{
 				isTrue = false;
 			}
-/*			if(isTrue){
+		if(isTrue){
 				if(results.size() == 2){
 					isTrue = true;
 				}
