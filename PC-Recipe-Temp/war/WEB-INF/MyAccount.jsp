@@ -9,6 +9,11 @@
 		<meta http-equiv="Content-Language" content="he" />
 		<title>PC-Recipes - MyAccount</title>
 	</head>
+	<script>
+    $(document).ready( function() {
+    	$('#search').hide(); 
+    });
+    </script>
 	<body>
 	<%@ include file="/WEB-INF/header.jsp" %>
 	

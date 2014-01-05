@@ -85,10 +85,13 @@ public class Recipe {
 	}
 	*/
 	public String CategoryStr(){
+		Questions q = new Questions();
+		String[] a = q.inputAnswer();
+		
 		String str="";
 		for (int i=0; i<_category.length-1; i++)
-			str+=_category[i]+", ";
-		str+=_category[_category.length-1];
+			str+=a[_category[i]]+", ";
+		str+=a[_category[_category.length-1]];
 		return str;
 	}
 	

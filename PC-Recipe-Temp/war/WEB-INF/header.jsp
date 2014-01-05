@@ -19,7 +19,6 @@
 </div>
 <div id="header2">
 	<div id="search">
-		
 			חיפוש מתכון: <input type="text" name="SearchItem1" value="כתוב כאן" onfocus="if(this.value == 'כתוב כאן') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'כתוב כאן'; }">
 				<button id="searchButton1">חפש</button>
 				<button id="clearSearch">נקה חיפוש</button>

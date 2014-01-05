@@ -56,11 +56,11 @@
 				<%=questionsArray[0].getQuestion()%>
 			</h2>
 			<ul id="answer">
-				<li class="ans_choice"><div id="ans1"><%=arrayAnswer[questionsArray[0].getAnswerID()[0]]%></div></li>
-				<li class="ans_choice"><div id="ans2"><%=arrayAnswer[questionsArray[0].getAnswerID()[1]]%></div></li>
-				<li class="ans_choice"><div id="ans3"><%=arrayAnswer[questionsArray[0].getAnswerID()[2]]%></div></li>
-				<li class="ans_choice"><div id="ans4"><%=arrayAnswer[questionsArray[0].getAnswerID()[3]]%></div></li>
-				<li class="ans_choice"><div id="ans5"><%=arrayAnswer[questionsArray[0].getAnswerID()[4]]%></div></li>
+				<li><div id="ansr1"><%=arrayAnswer[questionsArray[0].getAnswerID()[0]]%></div></li>
+				<li><div id="ansr2"><%=arrayAnswer[questionsArray[0].getAnswerID()[1]]%></div></li>
+				<li><div id="ansr3"><%=arrayAnswer[questionsArray[0].getAnswerID()[2]]%></div></li>
+				<li><div id="ansr4"><%=arrayAnswer[questionsArray[0].getAnswerID()[3]]%></div></li>
+				<li><div id="ansr5"><%=arrayAnswer[questionsArray[0].getAnswerID()[4]]%></div></li>
 			</ul>
 
 		</div>

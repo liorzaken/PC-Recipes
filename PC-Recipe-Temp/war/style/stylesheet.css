@@ -5,47 +5,35 @@
 html {
 	direction: rtl;
 }
+
 body {
+	font-family: Arial, Garamond, Times, Serif;
 	background-color: #FBEFF2
 }
-/*h2 {
-	font-family: Verdana;
-	font-weight: bold;
-	text-align: center;
-	color: #acd1b2;
-}*/
+
 #header img {
 	border-top-left-radius: 15px;
 	border: 2px solid #3c4543;
 	height: 81px;
 }
+
 #menu a {
-    color:#ffffff;
-    text-decoration:none;
+	color: #ffffff;
+	text-decoration: none;
 }
-/*#left {
-	float: left;
-	width: 15%;
-	margin-top: 10px;
-}
-#right {	
-	float: right;
-	width: 15%;
-	margin-top: 10px;
-}*/
+
 #mainFrame {
 	position: relative;
 	float: center;
 	margin-top: 10px;
 	margin-left: 15%;
 	margin-right: 15%;
-	/*height: 370px;*/
-	width:70%;
+	width: 70%;
 }
-#mainFrame p{
+
+#mainFrame p {
 	font-family: Arial, Garamond, Times, Serif;
 	font-size: 20px;
-	/*text-align: center;*/
 }
 
 #mainFrame h1 {
@@ -60,16 +48,14 @@ body {
 
 #headerRight {
 	float: right;
-	/*width: 70%;*/
 }
+
 #headerCenter {
 	float: center;
-	
 }
+
 #headerLeft {
 	float: Left;
-	/*width: 30%;
-	margin: 10px;*/
 }
 
 .tipQ {
@@ -85,26 +71,25 @@ body {
 #menu {
 	padding-top: 8px;
 }
-#menu ul li{
-	/*position: fixed;
-	right: 23%;*/
+
+#menu ul li {
 	top: 15px;
 	font-size: 25px;
 	margin: 10px 10px 10px 5px;
 	padding: 10px 10px 15px 10px;
 }
-
+/*
 #menu1 {
 	padding-top: 8px;
 }
-#menu1 ul li{
-	
+
+#menu1 ul li {
 	top: 15px;
 	font-size: 30px;
 	margin: 10px 10px 10px 5px;
 	padding: 10px 10px 15px 10px;
-	
 }
+
 #menu1 li {
 	display: inline;
 	font-family: Futura, Tahoma, sans-serif;
@@ -112,27 +97,22 @@ body {
 	border-radius: 5px 5px;
 	background-color: #9e191e;
 }
+
 #menu1 a {
-    color:#ffffff;
-    text-decoration:none;
-    
+	color: #ffffff;
+	text-decoration: none;
 }
-/*#navbar {
-	position: fixed;
-	top:120px;
-	right:20%;
-}*/
+*/
 #header {
 	position: relative;
-	/*top: 0px;*/
 	background-color: #3c4543;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
 	height: 85px;
 }
+
 #header2 {
 	position: relative;
-	/*top: 0px;*/
 	background-color: #9e191e;
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -146,9 +126,8 @@ body {
 #mainFrameQuestion ul {
 	font-size: 25px;
 	list-style-type: none;
-	/*position: fixed;
-	margin: -10px;*/
 }
+
 #menu li {
 	display: inline;
 	font-family: Futura, Tahoma, sans-serif;
@@ -156,96 +135,94 @@ body {
 	border-radius: 5px 5px;
 	background-color: #9e191e;
 }
+
 #menu li a {
 	text-decoration: none;
 }
+
 #menu li a:link {
 	color: #ffffff;
 }
+
 #menu li a:visited {
 	color: #ffffff;
 }
+
 #menu li a:hover {
 	color: #f68b1f;
 }
-/*#navbar li {
-	display: inline;
-	border: 2px solid #000000;
-	font-family: Futura, Tahoma, sans-serif;
-	color: #000000;
-	padding: 5px;
-	border-radius: 5px 5px;
-	background-color: #FFAF00
-}*/
+
 p {
 	font-family: Tahoma;
 	font-size: 1em;
 }
+
 #search {
-	float:right;
+	float: right;
 	display: inline;
 	color: #ffffff;
 	margin-top: 8px;
 	margin-right: 10px
 }
+
 #search button {
 	display: inline;
 }
-#search form{
+
+#search form {
 	font-size: 16px;
 	color: white;
-    font-family: Verdana, Arial, Sans-Serif;
-    display: inline;
+	font-family: Verdana, Arial, Sans-Serif;
+	display: inline;
 	width: 30%;
 }
 
 #pRecipe {
-	float:left;
+	float: left;
 	position: relative;
 	margin-top: 10px;
 	margin-left: 15%;
 	margin-right: 15%;
-	/*height: 370px;*/
-	width:70%;
-	
-	
+	width: 70%;
 }
+
 #addProduct {
-	float:right;
+	float: right;
 	display: inline;
 	margin-top: 8px;
 	margin-right: 10px
+	padding-top: 2px;
+	float: right;
+	width: 20%;
 }
+
+
 #addProduct button {
 	display: inline;
 }
-#addProduct form{
+
+#addProduct form {
 	font-size: 16px;
 	color: #000000;
-    font-family: Verdana, Arial, Sans-Serif;
-    display: inline;
+	font-family: Verdana, Arial, Sans-Serif;
+	display: inline;
 	width: 30%;
 }
-/*table {
-	border: 1px solid black;
-	background-color: #acd1b2;
-}*/
-#footer{
+
+#footer {
 	clear: both;
 	position: relative;
-	/*float: bottom;*/
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 	margin: auto;
 	height: 75px;
-	background-color: #3c4543	
+	background-color: #3c4543
 }
+
 #footer2 {
 	clear: both;
 	position: relative;
-	/*float: bottom;*/
 	background-color: #9e191e;
-	/*padding-top: 10px;*/
 	margin: auto;
 	margin-top: 10px;
 	border-top-right-radius: 15px;
@@ -253,31 +230,24 @@ p {
 	height: 30px;
 }
 
-/*#youtyub {
-   	right: 400px;
-	bottom: -10px;
-    height: 350px;
-	width: 550px;
-    position: relative; 
-}*/
 iframe {
 	right: 30%;
 	position: relative;
 }
 
 #contact_us {
-	position: relative; 
+	position: relative;
 	height: 370px;
 	width: 500px;
 	border: 2px solid black;
 	border-radius: 2px;
-	/*margin: auto;*/
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 30px;
 	text-align: right;
 }
-#contact_us p{
+
+#contact_us p {
 	text-align: right;
 	font-size: 16px;
 }
@@ -287,14 +257,9 @@ iframe {
 	display: inline;
 	float: right;
 	margin-top: 10px;
-	/*margin-left: 50%;
-	margin-right: 35%;
-	height: 370px;*/
 	width: 38%;
-	/*background-color: #00f101;*/
 	border-right: 1px solid #9e191e;
 	border-left: 1px solid #9e191e;
-	
 }
 
 #mainFrameResults {
@@ -302,45 +267,63 @@ iframe {
 	display: inline;
 	float: left;
 	margin-top: 10px;
-	/*margin-left: 50%;
-	margin-right: 35%;
-	height: 370px;*/
-	/*height: 100%;*/
 	width: 38%;
-	/*background-color: #6001a1;*/
 }
 
 #questions {
 	float: left;
 	width: 50%;
-	/*background-color: #6001a1;*/
-}
-
-#addProduct {
-	padding-top: 2px;
-	float: right;
-	width: 20%;
-
-	/*background-color: #00f101;*/
 }
 
 
-.ans_choice {
+
+#ansr1,#ansr2,#ansr3,#ansr4,#ansr5 {
+	font-family: Arial, Garamond, Times, Serif;
 	border-radius: 5px;
 	margin: 5px 10px 15px 20px;
 	padding: 5px;
 	background-color: #9e191e;
 	color: #FFFFFF;
-	text-align: right;
+	text-align: center;
 	align: right;
 }
+
 #answer {
 	position: relative;
-	/*float: center;*/
 	margin-top: 10px;
-	/*margin-left: 50%;
-	margin-right: 15%;
-	height: 370px;
-	width:70%;
-	align: right;*/
+}
+
+#mainFrameResults a {
+	text-decoration: none;
+}
+
+#mainFrameResults a:link {
+	color: #000000;
+}
+
+#mainFrameResults a:visited {
+	color: #000000;
+}
+
+#mainFrameResults a:hover {
+	color: #9e191e;
+}
+
+.item,#RecipesView {
+	font-family: Arial, Garamond, Times, Serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-indent: 15px;
+	color: #9e191e;
+}
+#RecipesView {
+text-indent: 50px;
+}
+hr {
+	color: #9e191e;
+	background-color: #9e191e;
+	height: 1px;
+	border: 0;
+	width: 90%;
+	align:center;
 }

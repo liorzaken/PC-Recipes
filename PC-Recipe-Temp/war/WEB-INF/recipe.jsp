@@ -1,4 +1,5 @@
 <%@ page import="pcrecipes.server.Recipe"%>
+<%@ page import="pcrecipes.server.Questions"%>
 <%@page import="dbManager.DataBaseManager"%>
 <%@page import="java.util.List;"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="style/stylesheet.css" />
+<link type="text/css" rel="stylesheet" href="style/recipeStyle.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
 <meta http-equiv="Content-Language" content="he" />
@@ -15,6 +16,7 @@
 </head>
 <body>
 	<%
+	
 		List<Recipe> list;
 		if (session.getAttribute("nameRecipe") == null) {
 			list = DataBaseManager.getInstance().getAllRecipes();
@@ -25,6 +27,7 @@
 	%>
 	<%
 		for (Recipe item : list) {
+			
 	%>
 	<div id="header">
 		<div id="headerRight">
@@ -50,10 +53,8 @@
 		</p>
 	</div>
 	<div id="mainFrame">
-		<p>קטגוריות:</p>
-		<p>	<%=item.CategoryStr()%></p>
-
-		<p>מצרכים:</p>
+		<p><strong>קטגוריות</strong>: <%=item.CategoryStr()%></p>
+		<p id="title">מצרכים:</p>
 		<table>
 			<%
 				for (int i = 0; i < item._products.length; i++) {
@@ -61,19 +62,19 @@
 			<tr>
 				<td><%=i + 1%>.</td>
 				<td><%=item._products[i]%></td>
-				<td><%=item._unit[i]%></td>
+				<td> - <%=item._unit[i]%></td>
 			</tr>
 			<%
 				}
 			%>
 		</table>
 
-		<p>הערות למצרכים חלופיים:</p>
+		<p id="title">הערות למצרכים חלופיים:</p>
 		<p>
 			<%=item.get_swapProd()%>
 		</p>
 
-		<p>אופן ההכנה:</p>
+		<p id="title">אופן ההכנה:</p>
 		<p>
 			<%=item.get_instruction().getValue()%>
 		</p>
@@ -83,7 +84,6 @@
 		break;
 		}
 	%>
-	<a href="Main">חזרה לעמוד הראשי</a>
 	<div id="footer2"></div>
 	<div id="footer"></div>
 </body>
