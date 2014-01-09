@@ -65,7 +65,7 @@ body {
 }
 
 .tipQEm {
-	color: orange;
+	color: #9e191e;
 }
 
 #menu {
@@ -231,7 +231,7 @@ p {
 }
 
 iframe {
-	right: 30%;
+	right: 10%;
 	position: relative;
 }
 
@@ -326,4 +326,12 @@ hr {
 	border: 0;
 	width: 90%;
 	align:center;
+}
+.tipsdiv{
+	height:330px;
+	overflow:auto;
+}
+#tipsN{
+	color: #3c4543;
+	
 }
