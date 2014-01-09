@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +41,6 @@
 		<p>כי תיבול מוקדם גורם לירקות להגיר נוזלים – דבר שהופך את הסלט לנבול ולא רענן</p>
 		<P><font>&nbsp;</font>
 		</p>
-
 		<font class="tipQ">למה  לא כדאי <font class="tipQEm">לשמור את נוזלי שימורי האננס  </font>בעת הכנת סלט וולדורף </font>
 		<p></p>
 		<p>כי אפשר לטבול בנוזלים את התפוחים הקלופים, וכך הם לא ישחירו.</p>

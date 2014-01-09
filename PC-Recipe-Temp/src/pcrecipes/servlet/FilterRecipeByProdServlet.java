@@ -43,7 +43,7 @@ public class FilterRecipeByProdServlet extends HttpServlet {
 				for(Recipe item : list){
 					for(i=0; i< item._products.length ; i++ ){
 						for(int k = 0; k < products.length; k++){
-							if (item._products[i].equals(products[k])){
+							if (item._products[i].contains(products[k])){
 								count++;
 							}
 						}

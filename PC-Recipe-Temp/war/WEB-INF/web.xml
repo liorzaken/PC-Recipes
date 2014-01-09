@@ -67,6 +67,25 @@
 		<servlet-name>AddRecipeServlet</servlet-name>
 		<url-pattern>/AddRecipe</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RecipeUserServlet</servlet-name>
+		<servlet-class>pcrecipes.servlet.RecipeUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecipeUserServlet</servlet-name>
+		<url-pattern>/RecipeUser</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>AddMessageServlet</servlet-name>
+		<servlet-class>pcrecipes.servlet.AddMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddMessageServlet</servlet-name>
+		<url-pattern>/AddMessage</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>FilterProdServlet</servlet-name>
@@ -111,6 +130,15 @@
 	<servlet-mapping>
 		<servlet-name>RecipeManagerJSP</servlet-name>
 		<url-pattern>/AddRecipeForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RecipeUserJSP</servlet-name>
+		<jsp-file>/WEB-INF/AddRecipeUser.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecipeUserJSP</servlet-name>
+		<url-pattern>/AddRecipeUser</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>

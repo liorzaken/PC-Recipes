@@ -5,7 +5,7 @@
 		<div id="menu">
 			<ul>
 				<li><a href="Main">דף הבית</a></li>
-				<li><a href="MyAccount">החשבון שלי</a></li>
+				<li><a href="AddRecipeUser">הוסף מתכון</a></li>
 				<li><a href="Tips">טיפים</a></li>
 				<li><a href="ContactUs">צור קשר</a></li>
 				<li><a href="Help">עזרה</a></li>

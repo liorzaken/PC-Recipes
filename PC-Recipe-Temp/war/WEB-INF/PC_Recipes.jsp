@@ -18,6 +18,11 @@
 <meta http-equiv="Content-Language" content="he" />
 <title>PC-Recipes</title>
 </head>
+<script>
+    $(document).ready( function() {
+    	$('#endOfQuestion').hide(); 
+    });
+    </script>
 <body>
 	<%
 		Random r = new Random();
@@ -56,6 +61,7 @@
 				<%=questionsArray[0].getQuestion()%>
 			</h2>
 			<ul id="answer">
+				<li><div id="endOfQuestion">סוף מאגר השאלות</div></li>
 				<li><div id="ansr1"><%=arrayAnswer[questionsArray[0].getAnswerID()[0]]%></div></li>
 				<li><div id="ansr2"><%=arrayAnswer[questionsArray[0].getAnswerID()[1]]%></div></li>
 				<li><div id="ansr3"><%=arrayAnswer[questionsArray[0].getAnswerID()[2]]%></div></li>

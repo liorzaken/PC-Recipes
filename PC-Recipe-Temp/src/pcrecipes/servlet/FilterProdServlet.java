@@ -36,10 +36,10 @@ public class FilterProdServlet extends HttpServlet {
 
 		if(Item.toString() !=null)
 		{
-			boolean bool=false;
-			bool = DataBaseManager.getInstance().getProd(Item.toString());
-			if(bool){
-				response.getWriter().write("1");
+			String name="";
+			name = DataBaseManager.getInstance().getProd(Item.toString());
+			if(name!=null){
+				response.getWriter().write(name);
 			}
 			else{
 				response.getWriter().write("0");

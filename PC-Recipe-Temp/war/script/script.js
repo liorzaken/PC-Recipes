@@ -43,9 +43,8 @@ $(document).ready( function() {
 					alert(newProd + " לא קיים במערכת");
 				}
 				else{
-					prods.push(newProd);
-
-					$('#ProdsView').append('<div class="item">'+newProd+ '</div>');
+					prods.push(ret);
+					$('#ProdsView').append('<div class="item">'+ret+ '</div>');
 					searchByProd();
 				}
 				$('input[name=addItem]').val("כתוב כאן");
@@ -193,6 +192,10 @@ $(document).ready( function() {
 	$('#clearSearch').click(function() {
 		clear();
 	});
+	$('#endOfQuestion').click(function() {
+		clear();
+	});
+	
 	$('#clearProds').click(function() {
 		prods = [];
 		recipeProd = [];
@@ -238,8 +241,8 @@ function changeQeustion (){
 		data: dataString,
 		success: function(ret){
 			if(ret=="0"){
-				$('#question').text("סוף מאגר השאלות");
-				$('#ansr1').text("לחיפוש מחדש לחצו על הכפתור");
+				$('#endOfQuestion').show();
+				$('#ansr1').hide();
 				$('#ansr2').hide();
 				$('#ansr3').hide();
 				$('#ansr4').hide();
@@ -265,6 +268,7 @@ function changeQeustion (){
 	});
 }
 function showAns(){
+	$('#endOfQuestion').hide();
 	$('#ansr1').show();
 	$('#ansr2').show();
 	$('#ansr3').show();
@@ -290,4 +294,19 @@ function display(array){
 	for ( var i = 0; i < array.length; i = i + 1 ) {
 		$('#RecipesView').append('<hr><div id="itemRec"><a href="/Search?SearchItem='+array[i]+'" target="_blank">'+array[i]+'</a></div>');
 	}
+}
+
+function validate(){
+	$(".requiredAttr").each(function(){
+		if($(this).val().length < 1){
+			alert("נא למלא את כל השדות");
+			$(this).focus();
+			return false;
+		}
+		else{
+			return true;
+		}
+	});
+
+	return false;
 }

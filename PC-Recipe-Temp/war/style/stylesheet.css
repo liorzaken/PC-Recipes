@@ -53,6 +53,14 @@ body {
 #headerCenter {
 	float: center;
 }
+textarea {
+	width:268px; 
+	height:153px; 
+	overflow:auto; 
+	background:white; 
+	border:1px solid #cacaca; 
+	padding:2px 0 0 3px; 
+}
 
 #headerLeft {
 	float: Left;
@@ -78,31 +86,7 @@ body {
 	margin: 10px 10px 10px 5px;
 	padding: 10px 10px 15px 10px;
 }
-/*
-#menu1 {
-	padding-top: 8px;
-}
 
-#menu1 ul li {
-	top: 15px;
-	font-size: 30px;
-	margin: 10px 10px 10px 5px;
-	padding: 10px 10px 15px 10px;
-}
-
-#menu1 li {
-	display: inline;
-	font-family: Futura, Tahoma, sans-serif;
-	padding: 5px;
-	border-radius: 5px 5px;
-	background-color: #9e191e;
-}
-
-#menu1 a {
-	color: #ffffff;
-	text-decoration: none;
-}
-*/
 #header {
 	position: relative;
 	background-color: #3c4543;
@@ -231,20 +215,24 @@ p {
 }
 
 iframe {
-	right: 10%;
+	right: 15%;
 	position: relative;
 }
-
+#contact_us p#contactTitle{
+//	text-align: center;
+	font-size: 30px;
+}
 #contact_us {
+	right: 20%;
 	position: relative;
-	height: 370px;
-	width: 500px;
+//	height: 370px;
+	width: 350px;
 	border: 2px solid black;
 	border-radius: 2px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 30px;
-	text-align: right;
+	text-align: center;
 }
 
 #contact_us p {
@@ -277,7 +265,7 @@ iframe {
 
 
 
-#ansr1,#ansr2,#ansr3,#ansr4,#ansr5 {
+#ansr1,#ansr2,#ansr3,#ansr4,#ansr5,#endOfQuestion {
 	font-family: Arial, Garamond, Times, Serif;
 	border-radius: 5px;
 	margin: 5px 10px 15px 20px;
@@ -286,8 +274,14 @@ iframe {
 	color: #FFFFFF;
 	text-align: center;
 	align: right;
+	cursor: hand;
 }
-
+#ansr1:hover,#ansr2:hover,#ansr3:hover,#ansr4:hover,#ansr5:hover,#endOfQuestion:hover{
+    color: #f68b1f;
+}
+#mainFrameResults a:hover {
+	color: #9e191e;
+}
 #answer {
 	position: relative;
 	margin-top: 10px;
@@ -318,6 +312,9 @@ iframe {
 }
 #RecipesView {
 text-indent: 50px;
+height:300px;
+overflow:auto;
+
 }
 hr {
 	color: #9e191e;
@@ -328,7 +325,7 @@ hr {
 	align:center;
 }
 .tipsdiv{
-	height:330px;
+	height:380px;
 	overflow:auto;
 }
 #tipsN{
