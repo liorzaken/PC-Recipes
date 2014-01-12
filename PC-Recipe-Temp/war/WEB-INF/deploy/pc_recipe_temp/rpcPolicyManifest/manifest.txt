@@ -1,3 +1,0 @@
-# Module pc_recipe_temp
-# RPC service class, partial path of RPC policy file
-pcrecipes.client.GreetingService, 14F2E2F51F0594292B484DFD09A18C08.gwt.rpc
